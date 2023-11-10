@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Game Collection</title>
+</head>
+
+<body>
+  <h1>Game Collection</h1>
+  <ul>
+    <% games.forEach((game)=> { %>
+      <li>
+        <p>
+          <%= game.title %>
+        </p>
+      </li>
+      <% }); %>
+  </ul>
+  <ul>
+    <% games.forEach(game=> { %>
+      <li><a href="/games/<%= game._id %>">
+          <%= game.title %>
+        </a></li>
+      <% }); %>
+  </ul>
+  <a href="/addItem">create a new game</a>
+</body>
+
+</html>
