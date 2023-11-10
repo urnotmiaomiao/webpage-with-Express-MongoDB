@@ -14,6 +14,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
+
+// Connect to the database
 const db = monk('localhost:27017/Arcade'); // Connect to your MongoDB database named "Arcade"
 const gamesCollection = db.get('Games'); // "Games" is the name of your collection
 
